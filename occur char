@@ -1,0 +1,41 @@
+ internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the value of string");
+            string s = Console.ReadLine();
+
+            var chars = s.ToCharArray();
+
+            Dictionary<char ,int> chardictionary= new Dictionary<char ,int>();
+            foreach(var ch in chars)
+            {
+                if (chardictionary.ContainsKey(ch))
+                {
+                    chardictionary[ch] = chardictionary[ch] + 1;
+                }
+                else
+                {
+                    chardictionary.Add(ch, 1);
+                }
+
+            }
+            //loop through dic for only keys
+            var keys = new HashSet<char>(chardictionary.Keys);
+
+            foreach(var ch in keys)
+            {
+                if(chardictionary[ch]>1)
+                {
+                    Console.WriteLine($"Character {ch} repeating {chardictionary[ch]} times.");
+                }
+                Console.ReadKey();
+            }
+
+
+
+            
+           
+        }
+    }
+}
