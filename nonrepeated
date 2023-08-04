@@ -1,0 +1,32 @@
+namespace nonrepeated
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "aabbcdd";
+            {
+                bool isDuplicate;
+                for (int i = 0; i < str.Length; i++)
+                {
+                    isDuplicate = false;
+                    for (int j = 0; j < str.Length; j++)
+                    {
+                        if ((str[i] == str[j]) && i != j)
+                        {
+                            isDuplicate = true;
+
+                            break;
+                        }
+                    }
+                    if (!isDuplicate)
+                    {
+                        Console.WriteLine(str[i]);
+                    }
+                }
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
