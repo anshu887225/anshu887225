@@ -1,0 +1,13 @@
+namespace indexof
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] myarray = { 1, 2, 3, 4, 5, 6, 7, 8, };    
+            int ab = Array.IndexOf(myarray, 6);
+            Console.WriteLine(ab);
+            Console.ReadLine();
+        }
+    }
+}
