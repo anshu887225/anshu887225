@@ -11,3 +11,36 @@ namespace indexof
         }
     }
 }
+
+
+
+// second program
+namespace indexof
+{
+    internal class Program
+    {
+        public static int GetIndexOf(string value, char c)
+        {
+            char[] charArray = value.ToCharArray();
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (charArray[i] == c)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        static void Main(string[] args)
+        {
+            string input = "My name is Vinod Pasi";
+            Console.WriteLine(input.IndexOf('v'));
+            Console.WriteLine(GetIndexOf(input, 'V'));
+            Console.ReadLine();
+        }
+    }
+
+   
+}
+
