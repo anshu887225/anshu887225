@@ -1,0 +1,15 @@
+namespace replace_char
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "a,b,c,d";
+            string strReplace = str.Replace(",", ":");
+            Console.WriteLine(strReplace);
+            string strReplace1 = str.Replace("b", "e");
+            Console.WriteLine(strReplace1);
+            Console.ReadLine();
+        }
+    }
+}
